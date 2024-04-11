@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-//                        textView.setText("That didn't work!");
+                        Toast.makeText(MainActivity.this, "Error Occurred", Toast.LENGTH_SHORT).show();
                     }
                 }){
                     protected Map<String, String> getParams(){

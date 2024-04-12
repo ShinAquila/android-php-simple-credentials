@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 String email = txt_email.getText().toString();
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url ="http://192.168.137.1/android_crud/create.php";
+                String url ="http://192.168.1.53/android_crud/create.php";
                 //local ip/folder name from htdocs/php create file
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,

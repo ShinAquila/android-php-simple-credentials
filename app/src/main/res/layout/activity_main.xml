@@ -14,14 +14,14 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/txt_username"
+            android:id="@+id/txt_uname"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:hint="Username"
             android:inputType="textPersonName"/>
         <EditText
-            android:id="@+id/txt_pass"
+            android:id="@+id/txt_pword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"

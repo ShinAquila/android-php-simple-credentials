@@ -26,20 +26,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText txt_username = findViewById(R.id.txt_username);
-        EditText txt_pass = findViewById(R.id.txt_pass);
+        EditText txt_uname = findViewById(R.id.txt_uname);
+        EditText txt_pword = findViewById(R.id.txt_pword);
         EditText txt_email = findViewById(R.id.txt_email);
         Button btn_save = findViewById(R.id.btn_save);
 
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String uname = txt_username.getText().toString();
-                String pword = txt_pass.getText().toString();
+                String uname = txt_uname.getText().toString();
+                String pword = txt_pword.getText().toString();
                 String email = txt_email.getText().toString();
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url ="https://192.168.1.53/android_crud/create.php";
+                String url ="http://192.168.137.1/android_crud/create.php";
                 //local ip/folder name from htdocs/php create file
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,

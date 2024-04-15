@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 String url ="http://192.168.1.53/android_crud/create.php";
                 //local ip/folder name from htdocs/php create file
 
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                    StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this, "Error Occurred", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }){
                     protected Map<String, String> getParams(){

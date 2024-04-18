@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".retrieve">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,21 +13,31 @@
         android:padding="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
             android:gravity="center"
+            android:text="Retrieve Credentials"
             android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txt_id"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:hint="ID"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/txt_uname"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"
+            android:enabled="false"
             android:hint="Username"
             android:inputType="textPersonName" />
 
@@ -37,14 +46,16 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"
+            android:enabled="false"
             android:hint="Password"
-            android:inputType="textPassword" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/txt_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"
+            android:enabled="false"
             android:hint="Email"
             android:inputType="textEmailAddress" />
 
@@ -55,29 +66,8 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_save"
+                android:id="@+id/btn_retrieve"
                 android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:text="Save to Database" />
-            <Button
-                android:id="@+id/btn_toUpdate"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:text="Update to Database" />
-            <Button
-                android:id="@+id/btn_delete"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:text="Delete from Database" />
-            <Button
-                android:id="@+id/btn_toRetrieve"
-                android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
@@ -86,8 +76,6 @@
         </LinearLayout>
 
 
-
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

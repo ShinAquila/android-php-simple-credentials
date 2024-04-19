@@ -64,6 +64,7 @@ public class retrieve extends AppCompatActivity {
                                         txt_pword.setText(user_pass);
                                         txt_email.setText(user_email);
                                     }
+                                    Toast.makeText(retrieve.this, "Data Retrieved", Toast.LENGTH_SHORT).show();
                                 } catch(JSONException e){
                                     e.printStackTrace();
                                     Toast.makeText(retrieve.this, response, Toast.LENGTH_SHORT).show();

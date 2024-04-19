@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn_toUpdate = findViewById(R.id.btn_toUpdate);
         Button btn_toRetrieve = findViewById(R.id.btn_toRetrieve);
+        Button btn_toDelete = findViewById(R.id.btn_toDelete);
         btn_toUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openRetrieve();
+            }
+        });
+        btn_toDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDelete();
             }
         });
 
@@ -93,6 +100,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openRetrieve(){
         Intent intent = new Intent(this, retrieve.class);
+        startActivity(intent);
+    }
+
+    public void openDelete(){
+        Intent intent = new Intent(this, delete.class);
         startActivity(intent);
     }
 }
